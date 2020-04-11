@@ -6,20 +6,27 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-# game idea: Player gathers stats based on events + self-input improvement plans.
+## game idea: Player gathers stats based on events + self-input improvement plans.
 
-### Todo
-
-## MVP
+# Todo for MVP
 
 tech wants - TS, JSX, Redux,
 
-# player
+## player
 
-- create a player - stats- hp, strength, int, wis, con, relaxed, idle.
+- create a player - stats- hp, strength, int, wis, con, relaxed, idle. Complete :)
 - hook up player statefully -- redux or context
 -
 
 # features
 
-# events
+## top bar
+
+- profile
+- about
+- tasks
+- (possibly) monsters
+
+# events (would like to have)
+
+- on a timed basis/completion basis, allow for a special mission to appear and be able to complete.
