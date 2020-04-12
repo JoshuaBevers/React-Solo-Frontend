@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../component_css/profile.css";
 import { Player } from "../interfaces/player";
 
 class Profile extends Component {
