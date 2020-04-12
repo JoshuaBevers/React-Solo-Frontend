@@ -15,15 +15,15 @@ tech wants - TS, JSX, Redux,
 ## player
 
 - create a player - stats- hp, strength, int, wis, con, relaxed, idle. Complete :)
-- hook up player statefully -- redux or context
+- hook up player statefully -- redux or context -- this may not be required.
 -
 
 # features
 
 ## top bar
 
-- profile
-- about
+- profile - Complete -- requires beautifying
+- about - Complete -- requires Beautifying.
 - tasks
 - (possibly) monsters
 

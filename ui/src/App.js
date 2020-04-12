@@ -17,15 +17,12 @@ function App() {
       <Router>
         <nav>
           <div className="nav-wrapper">
-            {/* <a href="#" class="brand-logo">
-              Logo
-            </a> */}
+            <a className="brand-logo">D&Me</a>
 
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
                 <Link to={`/user/quests`}>Quests</Link>
               </li>
-
               <li>
                 <Link to={`/user/profile`}>Profile</Link>
               </li>
