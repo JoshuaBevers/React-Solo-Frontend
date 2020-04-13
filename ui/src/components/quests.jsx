@@ -9,6 +9,9 @@ const Quests = () => {
   return (
     <div className="quest-list">
       <h1>Please select a quest, {name}!</h1>
+      Available Quests:
+      <br />
+      Destroying the world.
       <button
         onClick={() =>
           dispatch({
@@ -19,7 +22,11 @@ const Quests = () => {
       >
         Accept quest
       </button>
-      Current quests: {quests}
+      <div>
+        Current Quests:
+        <br />
+        {quests}
+      </div>
     </div>
   );
 };
