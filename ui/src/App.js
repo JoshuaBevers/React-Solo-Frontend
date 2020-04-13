@@ -21,17 +21,17 @@ function App() {
 
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <Link to={`/user/quests`}>Quests</Link>
+                <Link to={`/quests/`}>Quests</Link>
               </li>
               <li>
-                <Link to={`/user/profile`}>Profile</Link>
+                <Link to={`/profile/`}>Profile</Link>
               </li>
             </ul>
           </div>
         </nav>
         <div className="App-header">
-          {<Route path="/:user?/quests" component={Quests}></Route>}
-          {<Route path="/:user?/profile" component={Profile}></Route>}
+          {<Route path="/quests/:user?" component={Quests}></Route>}
+          {<Route path="/profile/:user?" component={Profile}></Route>}
         </div>
       </Router>
     </div>

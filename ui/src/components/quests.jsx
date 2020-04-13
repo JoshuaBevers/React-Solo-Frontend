@@ -18,8 +18,24 @@ class Quests extends Component {
 
   render() {
     return (
-      <div>
-        <p> This is the quests tab!</p>
+      <div className="quest-list">
+        <h1>Please select a quest!</h1>
+        <br></br>
+        <h2>Strength quests</h2>
+        <ul>
+          <li>button goes here. Need to figure out how to craft it.</li>
+          <li>Button goes here. Need to figure out how to craft it.</li>
+        </ul>
+        <h2>Inteligence Quest</h2>
+        <ul>
+          <li>button goes here. Need to figure out how to craft it.</li>
+          <li>Button goes here. Need to figure out how to craft it.</li>
+        </ul>
+        <h2>Constitution Quest</h2>
+        <ul>
+          <li>button goes here. Need to figure out how to craft it.</li>
+          <li>Button goes here. Need to figure out how to craft it.</li>
+        </ul>
       </div>
     );
   }

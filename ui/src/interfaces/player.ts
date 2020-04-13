@@ -10,7 +10,7 @@ export class Player {
   con: number;
   relaxed: number;
   idle: number;
-  //strength, int, wis, con, relaxed, idle.
+  quests: [];
   constructor(
     id: number,
     name: string,
@@ -20,7 +20,8 @@ export class Player {
     wis: number,
     con: number,
     relaxed: number,
-    idle: number
+    idle: number,
+    quests: []
   ) {
     this.id = id;
     this.name = name;
@@ -33,5 +34,6 @@ export class Player {
     this.con = con;
     this.relaxed = relaxed;
     this.idle = idle;
+    this.quests = quests;
   }
 }
