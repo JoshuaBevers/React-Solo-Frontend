@@ -1,4 +1,14 @@
 {
-  "name": "three sets of 20 pushups, 10 lunges, 20 squats, 10 side planks, 20 situps. ",
-  "attribute": 1
+  "strength": [
+    {
+      "id": 1,
+      "name": "three sets of 20 pushups, 10 lunges, 20 squats, 10 side planks, 20 situps. ",
+      "attribute": 1
+    },
+    {
+      "id": 2,
+      "name": "The second set ",
+      "attribute": 1
+    }
+  ]
 }

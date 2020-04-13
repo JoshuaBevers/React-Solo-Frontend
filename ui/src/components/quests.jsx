@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "../component_css/profile.css";
 import { Player } from "../interfaces/player";
+import * as JSON from "../util/attribute-quests/strength.json";
 
 class Quests extends Component {
   state = {
-    player: {},
+    player: { quests: [] },
   };
 
   getPlayer = () => {

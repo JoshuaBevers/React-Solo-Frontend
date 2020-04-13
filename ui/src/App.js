@@ -1,12 +1,20 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { Player } from "./interfaces/player";
 
 //components
 import Profile from "./components/profile";
 import Quests from "./components/quests";
 
 function App() {
+  const LoadedPlayer = new Player(1, "Joshua", 1, 1, 1, 1, 1, 1, 10, []);
+
+  const initialState = {
+    player: LoadedPlayer,
+  };
+
+  console.log(initialState.player);
   return (
     <div className="App">
       <link
@@ -14,6 +22,7 @@ function App() {
         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
       />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
       <Router>
         <nav>
           <div className="nav-wrapper">
@@ -21,17 +30,24 @@ function App() {
 
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <Link to={`/quests/`}>Quests</Link>
+                <Link to={`/quests`}>Quests</Link>
               </li>
               <li>
-                <Link to={`/profile/`}>Profile</Link>
+                <Link to={`/profile`}>Profile</Link>
               </li>
             </ul>
           </div>
         </nav>
         <div className="App-header">
-          {<Route path="/quests/:user?" component={Quests}></Route>}
-          {<Route path="/profile/:user?" component={Profile}></Route>}
+          {<Route path="/quests" component={Quests} />}
+          {
+            <Route
+              path="/profile"
+              render={(props) => (
+                <Profile {...props} player={initialState.player} />
+              )}
+            />
+          }
         </div>
       </Router>
     </div>
