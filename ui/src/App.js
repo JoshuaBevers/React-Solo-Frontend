@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useReducer } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import { Player } from "./interfaces/player";
+import { StateProvider } from "./context";
+import { addQuest } from "./context/reducers";
 
 //components
 import Profile from "./components/profile";
@@ -14,7 +16,6 @@ function App() {
     player: LoadedPlayer,
   };
 
-  console.log(initialState.player);
   return (
     <div className="App">
       <link
@@ -39,15 +40,10 @@ function App() {
           </div>
         </nav>
         <div className="App-header">
-          {<Route path="/quests" component={Quests} />}
-          {
-            <Route
-              path="/profile"
-              render={(props) => (
-                <Profile {...props} player={initialState.player} />
-              )}
-            />
-          }
+          <StateProvider value={useReducer(addQuest, initialState.player)}>
+            {<Route path="/quests" component={Quests} />}
+            {<Route path="/profile" component={Profile} />}
+          </StateProvider>
         </div>
       </Router>
     </div>
