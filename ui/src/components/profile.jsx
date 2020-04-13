@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import StateContext from "../context";
-import "./profile.css";
 
 const Profile = () => {
-  const [player, dispatch] = useContext(StateContext);
+  const [player] = useContext(StateContext);
   const { name, hp, str, int, con, idle, relaxed, wis, level, quests } = player;
   return (
     <div>

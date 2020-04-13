@@ -1,17 +1,16 @@
 import React, { useContext } from "react";
 import StateContext from "../context";
-import * as JSON from "../util/attribute-quests/strength.json";
 
 const Quests = () => {
   const [player, dispatch] = useContext(StateContext);
-  console.log(player);
   const { name, quests } = player;
   return (
     <div className="quest-list">
       <h1>Please select a quest, {name}!</h1>
-      Available Quests:
+      <h3>Available Quests:</h3>
       <br />
       Destroying the world.
+      <br />
       <button
         onClick={() =>
           dispatch({

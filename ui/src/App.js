@@ -8,6 +8,7 @@ import { addQuest } from "./context/reducers";
 //components
 import Profile from "./components/profile";
 import Quests from "./components/quests";
+import Home from "./components/home";
 
 function App() {
   const LoadedPlayer = new Player(1, "Joshua", 1, 1, 1, 1, 1, 1, 10, []);
@@ -27,7 +28,9 @@ function App() {
       <Router>
         <nav>
           <div className="nav-wrapper">
-            <a className="brand-logo">D&Me</a>
+            <a href="/" className="brand-logo">
+              D&Me
+            </a>
 
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
@@ -41,6 +44,7 @@ function App() {
         </nav>
         <div className="App-header">
           <StateProvider value={useReducer(addQuest, initialState.player)}>
+            {<Route path="/" component={Home} />}
             {<Route path="/quests" component={Quests} />}
             {<Route path="/profile" component={Profile} />}
           </StateProvider>
