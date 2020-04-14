@@ -19,13 +19,13 @@
       "questId": 1,
       "questName": "Jog for two miles",
       "attribute": 1,
-      "type": "constituion"
+      "type": "constitution"
     },
     {
       "questId": 2,
       "questName": "The second example constitution",
       "attribute": 1,
-      "type": "constituion"
+      "type": "constitution"
     }
   ]
 }

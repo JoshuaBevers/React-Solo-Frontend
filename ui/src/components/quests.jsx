@@ -28,9 +28,7 @@ const Quests = () => {
 
                 <button
                   onClick={() => {
-                    {
-                      console.log("the quest object is: ", quest);
-                    }
+                    // dispatch({ type: "strength", player: player });
                     dispatch({
                       type: "ADD_QUEST",
                       quests: [quest],
