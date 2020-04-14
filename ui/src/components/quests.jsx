@@ -20,30 +20,45 @@ const Quests = () => {
   return (
     <div className="quest-list">
       <h1>Please select a quest, {name}!</h1>
-      <h3>Available Quests:</h3>
-      questlist is:
-      {questArray.map((quest, index) => {
-        return (
-          <ul key={index}>
-            <li>{quest.questName}</li>
-            <button
-              onClick={() =>
-                dispatch({
-                  type: "ADD_QUEST",
-                  quests: [`${quest.questName}`],
-                })
-              }
-            >
-              Accept quest
-            </button>
-          </ul>
-        );
-      })}
-      <div>
-        Current Quests:
-        <br />
-        {quests}
-      </div>
+      {quests.length === 0
+        ? questArray.map((quest, index) => {
+            return (
+              <ul key={index}>
+                <li>{quest.questName}</li>
+
+                <button
+                  onClick={() => {
+                    {
+                      console.log("the quest object is: ", quest);
+                    }
+                    dispatch({
+                      type: "ADD_QUEST",
+                      quests: [quest],
+                    });
+                  }}
+                >
+                  Accept the Quest
+                </button>
+              </ul>
+            );
+          })
+        : quests.map((quest, index) => {
+            return (
+              <ul key={index}>
+                <li>{quest.questName}</li>
+                <button
+                  onClick={() => {
+                    dispatch({
+                      type: "REMOVE_QUEST",
+                      quests: [quest],
+                    });
+                  }}
+                >
+                  RemoveQuest{" "}
+                </button>
+              </ul>
+            );
+          })}
     </div>
   );
 };

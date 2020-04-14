@@ -27,10 +27,10 @@ const Profile = () => {
       <br />
       Active Quests:
       {quests.length > 0 ? (
-        quests.map((quest) => {
+        quests.map((quest, index) => {
           return (
-            <ul key={quest.name}>
-              <li>{quest}</li>
+            <ul key={index}>
+              <li>{quest.questName}</li>
             </ul>
           );
         })
