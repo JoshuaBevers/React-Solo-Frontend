@@ -51,6 +51,7 @@ const Quests = () => {
                       quests: [quest],
                     });
                   }}
+                  data-testid="toggle"
                 >
                   RemoveQuest{" "}
                 </button>
