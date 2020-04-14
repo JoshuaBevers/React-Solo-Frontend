@@ -27,6 +27,7 @@ const Quests = () => {
                 <li>{quest.questName}</li>
 
                 <button
+                  data-testid="accept"
                   onClick={() => {
                     // dispatch({ type: "strength", player: player });
                     dispatch({
