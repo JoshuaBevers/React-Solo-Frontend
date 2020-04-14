@@ -1,0 +1,14 @@
+{
+  "constitution": [
+    {
+      "id": 1,
+      "name": "Jog for two miles",
+      "attribute": 1
+    },
+    {
+      "id": 2,
+      "name": "The second example",
+      "attribute": 1
+    }
+  ]
+}

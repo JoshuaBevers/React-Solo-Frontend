@@ -1,13 +1,26 @@
 {
   "strength": [
     {
-      "id": 1,
-      "name": "three sets of 20 pushups, 10 lunges, 20 squats, 10 side planks, 20 situps. ",
+      "questId": 1,
+      "questName": "three sets of 20 pushups, 10 lunges, 20 squats, 10 side planks, 20 situps. ",
       "attribute": 1
     },
     {
-      "id": 2,
-      "name": "The second set ",
+      "questId": 2,
+      "questName": "The second set strength",
+      "attribute": 1
+    }
+  ],
+
+  "constitution": [
+    {
+      "questId": 1,
+      "questName": "Jog for two miles",
+      "attribute": 1
+    },
+    {
+      "questId": 2,
+      "questName": "The second example constitution",
       "attribute": 1
     }
   ]

@@ -35,7 +35,7 @@ const Profile = () => {
           );
         })
       ) : (
-        <p> You got jack in that ternary, bud.</p>
+        <p> You have no quests! Go get some!</p>
       )}
     </div>
   );
