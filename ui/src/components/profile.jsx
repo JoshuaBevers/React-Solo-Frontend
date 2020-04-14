@@ -5,7 +5,8 @@ const Profile = () => {
   const [player] = useContext(StateContext);
   const { name, hp, str, int, con, idle, relaxed, wis, level, quests } = player;
   return (
-    <div>
+    <div className="character">
+      <h2>HelloTest!</h2>
       Name: {name}
       <br />
       <br />
