@@ -25,9 +25,7 @@ const Quests = () => {
             return (
               <ul key={index}>
                 <li>{quest.questName}</li>
-
                 <button
-                  data-testid="accept"
                   onClick={() => {
                     // dispatch({ type: "strength", player: player });
                     dispatch({
@@ -35,6 +33,7 @@ const Quests = () => {
                       quests: [quest],
                     });
                   }}
+                  data-testid="toggle"
                 >
                   Accept the Quest
                 </button>

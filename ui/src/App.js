@@ -43,7 +43,6 @@ function App() {
           </div>
         </nav>
         <div className="App-header">
-          <p>hello</p>
           <StateProvider value={useReducer(addQuest, initialState.player)}>
             {<Route exact path="/" component={Home} />}
             {<Route path="/quests" component={Quests} />}

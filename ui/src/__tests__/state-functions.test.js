@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import ReactDOM from "react-dom";
+import StateContext, { StateProvider } from "../context";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
+import { Player } from "../interfaces/player";
 
 import Quests from "../components/quests";
 
-//test to make sure jest is set up correctly and working.
-
-// describe("Addition", () => {
-//   it("knows that 2 and 2 makes 4", () => {
-//     expect(2 + 2).toBe(4);
-//   });
-// });
-
 let container = null;
+const LoadedPlayer = new Player(1, "Joshua", 1, 1, 1, 1, 1, 1, 10, [
+  "Default Running",
+]);
+
+const initialState = {
+  player: LoadedPlayer,
+};
+
 beforeEach(() => {
   // setup a DOM element as a render target
   container = document.createElement("div");
@@ -27,10 +30,16 @@ afterEach(() => {
   container = null;
 });
 
-it("Adds quest when clicked", () => {
+test("Adds quest when clicked", () => {
   const onChange = jest.fn();
+  //   const quests = initialState;
   act(() => {
-    render(<Quests />, container);
+    ReactDOM.render(
+      <StateContext.Provider value={[LoadedPlayer]}>
+        <Quests />
+      </StateContext.Provider>,
+      container
+    );
   });
 
   const button = document.querySelector("[data-testid=accept]");
