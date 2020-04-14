@@ -42,8 +42,8 @@ test("Adds quest when clicked", () => {
     );
   });
 
-  const button = document.querySelector("[data-testid=accept]");
-  expect(button.innerHTML).toBe("Accept the Quest");
+  const button = document.querySelector("[data-testid=toggle]");
+  expect(button.innerHTML).toBe("RemoveQuest");
 
   act(() => {
     button.dispatchEvent(new MouseEvent("click", { bubbles: true }));

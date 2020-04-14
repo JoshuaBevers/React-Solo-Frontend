@@ -53,7 +53,7 @@ const Quests = () => {
                   }}
                   data-testid="toggle"
                 >
-                  RemoveQuest{" "}
+                  RemoveQuest
                 </button>
               </ul>
             );
