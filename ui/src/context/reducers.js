@@ -4,6 +4,7 @@ export const addQuest = (state, player) => {
     case "ADD_QUEST":
       return { ...state, quests };
     case "REMOVE_QUEST":
+      //quest complete rewards
       switch (quests[0].type) {
         case "strength":
           const oldStr = state;

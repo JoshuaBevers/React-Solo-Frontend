@@ -1,6 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import StateContext from "../context";
 import { generateRandomQuest } from "../engine/quest-generation";
+import styled from "styled-components";
+import Modal from "../components/questModal";
 
 function generateFourQuests() {
   const array = [
@@ -11,11 +13,21 @@ function generateFourQuests() {
   ];
   return array;
 }
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background-color: teal;
+  color: purple;
+`;
 
 const Quests = () => {
   const [player, dispatch] = useContext(StateContext);
   const { name, quests } = player;
   const questArray = generateFourQuests();
+  const [state, setState] = useState({ showModal: false });
+
+  const handleClose = () => {
+    setState({ showModal: false });
+  };
 
   return (
     <div className="quest-list">
@@ -25,18 +37,19 @@ const Quests = () => {
             return (
               <ul key={index}>
                 <li>{quest.questName}</li>
-
-                <button
+                <Button
+                  type="button"
                   onClick={() => {
-                    // dispatch({ type: "strength", player: player });
+                    setState({ showModal: true });
                     dispatch({
                       type: "ADD_QUEST",
                       quests: [quest],
                     });
                   }}
+                  data-testid="toggle"
                 >
                   Accept the Quest
-                </button>
+                </Button>
               </ul>
             );
           })
@@ -44,16 +57,20 @@ const Quests = () => {
             return (
               <ul key={index}>
                 <li>{quest.questName}</li>
-                <button
+                <Button
                   onClick={() => {
                     dispatch({
                       type: "REMOVE_QUEST",
                       quests: [quest],
                     });
                   }}
+                  data-testid="accept"
                 >
-                  RemoveQuest{" "}
-                </button>
+                  Complete the Quest
+                </Button>
+                {!!state.showModal && (
+                  <Modal quest={quest} closeModal={handleClose} />
+                )}
               </ul>
             );
           })}

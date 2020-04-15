@@ -28,7 +28,7 @@ function App() {
       <Router>
         <nav>
           <div className="nav-wrapper">
-            <a href={null} className="brand-logo">
+            <a href="/" className="brand-logo">
               D&Me
             </a>
 
