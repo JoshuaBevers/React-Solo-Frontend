@@ -66,9 +66,11 @@ const Quests = () => {
                   }}
                   data-testid="accept"
                 >
-                  RemoveQuest
+                  Complete the Quest
                 </Button>
-                {!!state.showModal && <Modal closeModal={handleClose} />}
+                {!!state.showModal && (
+                  <Modal quest={quest} closeModal={handleClose} />
+                )}
               </ul>
             );
           })}

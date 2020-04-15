@@ -6,7 +6,7 @@ const ModalOverlay = Styled.div`
   align-content: center;
   justify-content: center;
   height: 100vh;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.1);
   width: 100vw;
   position: absolute;
   top: 0;
@@ -16,13 +16,18 @@ const ModalOverlay = Styled.div`
 `;
 
 const ModalContent = Styled.div`
-  background: white;
+  color: black;
+  background: grey;
   border: solid 1px black;
   margin: auto;
-  max-width: 280px;
-  min-height: 100px;
-  padding: 1rem;
-  width: 100%;
+  max-width: auto;
+  min-height: auto;
+  padding-left: 10px;
+  padding-right: 20px;
+  position: fixed;
+  bottom: 0px;
+  border-radius: 100px;
+
 `;
 
 const Modal = (props) => {
@@ -31,14 +36,13 @@ const Modal = (props) => {
   };
 
   useEffect(() => {
-    setTimeout(handleClick, 2000);
+    setTimeout(handleClick, 1000);
   });
 
   return (
     <ModalOverlay>
       <ModalContent>
-        <p>You have accepted the quest load quest here!</p>
-        <button onClick={() => handleClick()}>Close Modal</button>
+        <p>Quest Accepted: {props.quest.questName}</p>
       </ModalContent>
     </ModalOverlay>
   );
