@@ -1,0 +1,93 @@
+{
+  "strength": [
+    {
+      "questId": 1,
+      "questName": "Three sets of 20 pushups, 10 lunges, 20 squats, 10 side planks, 20 situps. ",
+      "attribute": 1,
+      "type": "strength"
+    },
+    {
+      "questId": 2,
+      "questName": "Three sets of 20 axe mans, 10 pull ups, 2 minute planks, ",
+      "attribute": 1,
+      "type": "strength"
+    },
+    {
+      "questId": 3,
+      "questName": "The second set strength",
+      "attribute": 1,
+      "type": "strength"
+    },
+    {
+      "questId": 4,
+      "questName": "Two sets of 100 push ups, 200 sit ups, 20 minute run, 3 minute plank, yoga.",
+      "attribute": 2,
+      "type": "strength"
+    }
+  ],
+
+  "constitution": [
+    {
+      "questId": 1,
+      "questName": "Jog for two miles",
+      "attribute": 1,
+      "type": "constitution"
+    },
+    {
+      "questId": 2,
+      "questName": "Mocked Data for con 2.",
+      "attribute": 1,
+      "type": "constitution"
+    },
+    {
+      "questId": 3,
+      "questName": "Be spiderman",
+      "attribute": 1,
+      "type": "constitution"
+    },
+    {
+      "questId": 4,
+      "questName": "30 minute bike ride, 4 minutes plank, 4 mile jog.",
+      "attribute": 2,
+      "type": "constitution"
+    },
+    {
+      "questId": 5,
+      "questName": "con set 5.",
+      "attribute": 1,
+      "type": "constitution"
+    }
+  ],
+  "health": [
+    {
+      "questId": 1,
+      "questName": "Eat a robust lunch",
+      "attribute": 1,
+      "type": "Health"
+    }
+  ],
+  "intelligence": [
+    {
+      "questId": 1,
+      "questName": "Read for an hour.",
+      "attribute": 1,
+      "type": "intelligence"
+    }
+  ],
+  "wisdom": [
+    {
+      "questId": 1,
+      "questName": "Study a random philosopher for an hour",
+      "attribute": 1,
+      "type": "wisdom"
+    }
+  ],
+  "relaxed": [
+    {
+      "questId": 1,
+      "questName": "Meditate on the prospect on a super-intelligent shade of blue for ten minutes.",
+      "attribute": 1,
+      "type": "relaxed"
+    }
+  ]
+}
