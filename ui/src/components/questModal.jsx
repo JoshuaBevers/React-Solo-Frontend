@@ -43,6 +43,7 @@ const Modal = (props) => {
     <ModalOverlay>
       <ModalContent>
         <p>Quest Accepted: {props.quest.questName}</p>
+        {props.completed}
       </ModalContent>
     </ModalOverlay>
   );

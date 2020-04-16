@@ -37,7 +37,11 @@ const Quests = () => {
         ? questArray.map((quest, index) => {
             return (
               <ul key={index}>
-                <li>{quest.questName}</li>
+                <li>
+                  {quest.questName}
+                  <br />
+                  {quest.type}: + {quest.attribute}
+                </li>
                 <Button
                   type="button"
                   onClick={() => {
@@ -70,7 +74,11 @@ const Quests = () => {
                   Complete the Quest
                 </Button>
                 {!!state.showModal && (
-                  <Modal quest={quest} closeModal={handleClose} />
+                  <Modal
+                    quest={quest}
+                    complete="complete"
+                    closeModal={handleClose}
+                  />
                 )}
               </ul>
             );

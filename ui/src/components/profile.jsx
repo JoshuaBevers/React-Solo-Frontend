@@ -1,10 +1,9 @@
-import React, { useContext, useState, setState } from "react";
+import React, { useContext } from "react";
 import StateContext from "../context";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Button = styled.button`
-  /* Adapt the colors based on primary prop */
   background-color: black;
   color: red;
 `;
@@ -12,6 +11,9 @@ const Button = styled.button`
 const Profile = () => {
   const [player, dispatch] = useContext(StateContext);
   const { name, hp, str, int, con, relaxed, wis, level, quests } = player;
+  console.log(
+    "Thols: Checking our stats, eh? Good choice. I like the relaxed one."
+  );
   return (
     <div className="character">
       Name: {name}
@@ -36,7 +38,10 @@ const Profile = () => {
         quests.map((quest, index) => {
           return (
             <ul key={index}>
-              <li>{quest.questName}</li>
+              <li>
+                {quest.questName}
+                <br />
+              </li>
               <Button
                 onClick={() => {
                   dispatch({

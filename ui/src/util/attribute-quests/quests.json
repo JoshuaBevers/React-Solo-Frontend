@@ -63,7 +63,7 @@
       "questId": 1,
       "questName": "Eat a robust meal",
       "attribute": 3,
-      "type": "Health"
+      "type": "health"
     },
     {
       "questId": 2,
