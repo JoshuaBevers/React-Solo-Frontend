@@ -1,4 +1,4 @@
-import * as attributes from "../util/attribute-quests/strength";
+import * as attributes from "../util/attribute-quests/quests";
 
 export function generateRandomQuest() {
   const randomQuest = pickRandomQuest();
@@ -20,6 +20,17 @@ function getRandomQuestAttribute() {
 function createAttributeArray() {
   const strength = attributes.strength;
   const constitution = attributes.constitution;
-  const arrayOfAttributes = [strength, constitution];
+  const health = attributes.health;
+  const wisdom = attributes.wisdom;
+  const intelligence = attributes.intelligence;
+  const relaxed = attributes.relaxed;
+  const arrayOfAttributes = [
+    strength,
+    constitution,
+    health,
+    wisdom,
+    intelligence,
+    relaxed,
+  ];
   return arrayOfAttributes;
 }

@@ -1,8 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, setState } from "react";
 import StateContext from "../context";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background-color: black;
+  color: red;
+`;
 
 const Profile = () => {
-  const [player] = useContext(StateContext);
+  const [player, dispatch] = useContext(StateContext);
   const { name, hp, str, int, con, idle, relaxed, wis, level, quests } = player;
   return (
     <div className="character">
@@ -15,13 +23,11 @@ const Profile = () => {
       <br />
       Strength: {str}
       <br />
-      Intelect: {int}
+      Intellect: {int}
       <br />
       Constitution: {con}
       <br />
       Wisdom: {wis}
-      <br />
-      Idleness: {idle}
       <br />
       Relaxed: {relaxed}
       <br />
@@ -31,11 +37,23 @@ const Profile = () => {
           return (
             <ul key={index}>
               <li>{quest.questName}</li>
+              <Button
+                onClick={() => {
+                  dispatch({
+                    type: "REMOVE_QUEST",
+                    quests: [quest],
+                  });
+                }}
+              >
+                Complete the Quest
+              </Button>
             </ul>
           );
         })
       ) : (
-        <p> You have no quests! Go get some!</p>
+        <p>
+          You don't have a quest! <Link to={`/quests`}>Go get one!</Link>
+        </p>
       )}
     </div>
   );

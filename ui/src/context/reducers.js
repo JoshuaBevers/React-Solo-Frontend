@@ -16,6 +16,26 @@ export const addQuest = (state, player) => {
           const { con } = oldCon;
           const newCon = con + 1;
           return { ...state, quests: [], con: newCon };
+        case "health":
+          const oldHealth = state;
+          const { health } = oldHealth;
+          const newHealth = health + 1;
+          return newHealth;
+        case "intelligence":
+          const oldInt = state;
+          const { int } = oldInt;
+          const newInt = int + 1;
+          return newInt;
+        case "Wisdom":
+          const oldWis = state;
+          const { wis } = oldWis;
+          const newWis = wis + 1;
+          return newWis;
+        case "relaxed":
+          const oldRelaxed = state;
+          const { relaxed } = oldRelaxed;
+          const newRelaxed = relaxed + 1;
+          return newRelaxed;
         default:
           return state;
       }
