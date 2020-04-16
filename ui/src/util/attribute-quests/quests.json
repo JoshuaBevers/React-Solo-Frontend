@@ -61,15 +61,45 @@
   "health": [
     {
       "questId": 1,
-      "questName": "Eat a robust lunch",
-      "attribute": 1,
+      "questName": "Eat a robust meal",
+      "attribute": 3,
       "type": "Health"
+    },
+    {
+      "questId": 2,
+      "questName": "Understand that diamonds are just rocks.",
+      "attribute": 1,
+      "type": "health"
+    },
+    {
+      "questId": 3,
+      "questName": "Watch a movie",
+      "attribute": 1,
+      "type": "health"
     }
   ],
   "intelligence": [
     {
       "questId": 1,
       "questName": "Read for an hour.",
+      "attribute": 1,
+      "type": "intelligence"
+    },
+    {
+      "questId": 2,
+      "questName": "Write a quick program. Timebox 2 hours.",
+      "attribute": 2,
+      "type": "intelligence"
+    },
+    {
+      "questId": 3,
+      "questName": "Play some sudoku",
+      "attribute": 1,
+      "type": "intelligence"
+    },
+    {
+      "questId": 4,
+      "questName": "Learn a new math formula",
       "attribute": 1,
       "type": "intelligence"
     }
@@ -80,12 +110,42 @@
       "questName": "Study a random philosopher for an hour",
       "attribute": 1,
       "type": "wisdom"
+    },
+    {
+      "questId": 2,
+      "questName": "Dabate someone: You need to argue from the position you don't agree with.",
+      "attribute": 1,
+      "type": "wisdom"
+    },
+    {
+      "questId": 3,
+      "questName": "Become one with the force.",
+      "attribute": 2,
+      "type": "wisdom"
     }
   ],
   "relaxed": [
     {
       "questId": 1,
       "questName": "Meditate on the prospect on a super-intelligent shade of blue for ten minutes.",
+      "attribute": 1,
+      "type": "relaxed"
+    },
+    {
+      "questId": 2,
+      "questName": "take a 20 minute nap.",
+      "attribute": 1,
+      "type": "relaxed"
+    },
+    {
+      "questId": 3,
+      "questName": "Walk around the neighborhood.",
+      "attribute": 1,
+      "type": "relaxed"
+    },
+    {
+      "questId": 4,
+      "questName": "Talk to a rock.",
       "attribute": 1,
       "type": "relaxed"
     }
