@@ -11,7 +11,7 @@ const Home = () => {
       <br />
       <Link to={`/quests`}>To get started on some quests, click here!</Link>
       <br />
-      <Link to={`/profile`}>Or view out your stats by clicking here!</Link>
+      <Link to={`/profile`}>Or view your stats by clicking here!</Link>
     </h1>
   );
 };

@@ -11,7 +11,7 @@ import Quests from "./components/quests";
 import Home from "./components/home";
 
 function App() {
-  const LoadedPlayer = new Player(1, "Joshua", 1, 1, 1, 1, 1, 1, 10, []);
+  const LoadedPlayer = new Player(1, "Joshua", 10, 1, 1, 1, 1, 1, 10, []);
 
   const initialState = {
     player: LoadedPlayer,

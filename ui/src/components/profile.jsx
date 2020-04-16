@@ -8,6 +8,10 @@ const Button = styled.button`
   color: red;
 `;
 
+const Komplete = styled.p`
+  color: green;
+`;
+
 const Profile = () => {
   const [player, dispatch] = useContext(StateContext);
   const { name, hp, str, int, con, relaxed, wis, level, quests } = player;
@@ -39,9 +43,10 @@ const Profile = () => {
           return (
             <ul key={index}>
               <li>
-                {quest.questName}
+                <Komplete>{quest.questName}</Komplete>
                 <br />
               </li>
+              <br />
               <Button
                 onClick={() => {
                   dispatch({
