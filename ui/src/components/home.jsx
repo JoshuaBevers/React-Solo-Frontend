@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import StateContext from "../context";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [player] = useContext(StateContext);
@@ -8,7 +9,9 @@ const Home = () => {
     <h1>
       Welcome, {name}!
       <br />
-      Please select one of the options in the nav bar above!
+      <Link to={`/quests`}>To get started on some quests, click here!</Link>
+      <br />
+      <Link to={`/profile`}>Or view out your stats by clicking here!</Link>
     </h1>
   );
 };

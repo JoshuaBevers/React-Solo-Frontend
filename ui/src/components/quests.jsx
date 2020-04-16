@@ -16,8 +16,8 @@ function generateFourQuests() {
 
 const Button = styled.button`
   /* Adapt the colors based on primary prop */
-  background-color: teal;
-  color: purple;
+  background-color: black;
+  color: red;
 `;
 
 const Quests = () => {

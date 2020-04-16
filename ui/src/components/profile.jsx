@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import StateContext from "../context";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const [player] = useContext(StateContext);
@@ -35,7 +36,9 @@ const Profile = () => {
           );
         })
       ) : (
-        <p> You have no quests! Go get some!</p>
+        <p>
+          You don't have a quest! <Link to={`/quests`}>Go get one!</Link>
+        </p>
       )}
     </div>
   );
