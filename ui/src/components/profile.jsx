@@ -11,7 +11,7 @@ const Button = styled.button`
 
 const Profile = () => {
   const [player, dispatch] = useContext(StateContext);
-  const { name, hp, str, int, con, idle, relaxed, wis, level, quests } = player;
+  const { name, hp, str, int, con, relaxed, wis, level, quests } = player;
   return (
     <div className="character">
       Name: {name}
