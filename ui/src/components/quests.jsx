@@ -3,6 +3,7 @@ import StateContext from "../context";
 import { generateRandomQuest } from "../engine/quest-generation";
 import styled from "styled-components";
 import Modal from "../components/questModal";
+import "./quest.css";
 
 function generateFourQuests() {
   const array = [
@@ -24,7 +25,9 @@ const Quests = () => {
   const [player, dispatch] = useContext(StateContext);
   const { name, quests } = player;
   const questArray = generateFourQuests();
-  const [state, setState] = useState({ showModal: false });
+  const [state, setState] = useState({
+    showModal: false,
+  });
 
   const handleClose = () => {
     setState({ showModal: false });
@@ -32,7 +35,12 @@ const Quests = () => {
 
   return (
     <div className="quest-list">
-      <h1>Please select a quest, {name}!</h1>
+      {quests.length === 0 ? (
+        <h1>{name}, please select a quest!</h1>
+      ) : (
+        <h1>{name}, ready to turn that in?</h1>
+      )}
+
       {quests.length === 0
         ? questArray.map((quest, index) => {
             return (
@@ -42,6 +50,7 @@ const Quests = () => {
                   <br />
                   {quest.type}: + {quest.attribute}
                 </li>
+
                 <Button
                   type="button"
                   onClick={() => {

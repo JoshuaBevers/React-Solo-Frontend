@@ -35,8 +35,8 @@
     },
     {
       "questId": 2,
-      "questName": "Mocked Data for con 2.",
-      "attribute": 1,
+      "questName": "Try to run a mile in under 8 minutes.",
+      "attribute": 2,
       "type": "constitution"
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "questId": 5,
-      "questName": "con set 5.",
+      "questName": "Jog while practicing breathing exercises.",
       "attribute": 1,
       "type": "constitution"
     }
