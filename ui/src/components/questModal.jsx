@@ -36,14 +36,13 @@ const Modal = (props) => {
   };
 
   useEffect(() => {
-    setTimeout(handleClick, 1000);
+    setTimeout(handleClick, 1500);
   });
 
   return (
     <ModalOverlay>
       <ModalContent>
         <p>Quest Accepted: {props.quest.questName}</p>
-        {props.completed}
       </ModalContent>
     </ModalOverlay>
   );

@@ -3,7 +3,6 @@ import StateContext from "../context";
 import { generateRandomQuest } from "../engine/quest-generation";
 import styled from "styled-components";
 import Modal from "../components/questModal";
-import "./quest.css";
 
 function generateFourQuests() {
   const array = [
@@ -83,11 +82,7 @@ const Quests = () => {
                   Complete the Quest
                 </Button>
                 {!!state.showModal && (
-                  <Modal
-                    quest={quest}
-                    complete="complete"
-                    closeModal={handleClose}
-                  />
+                  <Modal quest={quest} closeModal={handleClose} />
                 )}
               </ul>
             );
